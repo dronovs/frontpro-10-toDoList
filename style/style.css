@@ -1,0 +1,151 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    padding-top: 20px;
+    background-color: #F9F3DF;
+}
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 500px;
+    height: 450px;
+    background-color: #A2CDCD;
+    padding: 15px;
+    border-radius: 5px;
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.main-input {
+    width: 45%;
+    height: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #D4ECDD;
+    border-radius: 5px;
+}
+.main-button {
+    width: 45%;
+    height: 80px;
+    background-color: #D4ECDD;
+    border-radius: 5px;
+}
+.main-ol {
+    width: 100%;
+    height: 100%;
+    list-style: auto;
+}
+
+.main-ol li {
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #345B63;
+    text-transform: capitalize;
+    border: 1px dashed grey;
+    border-radius: 5px;
+}
+
+.list {
+    width: 100%;
+    height: 325px;
+    border-radius: 5px;
+    background-color: #F9F3DF;
+    padding: 20px 20px 20px 50px;
+    overflow-y: scroll;
+    border: 2px #316B83 double;
+}
+.li-list {
+    padding-left: 10px;
+    background-color: #FFFD95;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    position: relative;
+}
+.delete-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    height: 15px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Grey_close_x.svg/1024px-Grey_close_x.svg.png");
+    background-position: center;
+    background-size: contain;
+}
+.completed {
+    background-color: #CDF2CA;
+}
